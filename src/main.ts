@@ -1,6 +1,13 @@
+import 'zone.js';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { App } from './app/app';
+import { appConfig } from './app/app.config';
+import { APP_PROVIDERS } from './app/core/providers/app.providers';
 
-bootstrapApplication(App, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(App, {
+  ...appConfig,
+  providers: [
+    ...(appConfig.providers ?? []),
+    ...APP_PROVIDERS
+  ]
+}).catch(err => console.error(err));

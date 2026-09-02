@@ -1,0 +1,118 @@
+:host {
+  --primary-color: #0f172a;
+  --accent-color: #2563eb;
+  --card-border: #e2e8f0;
+}
+
+/* Header Component Styling */
+.app-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  border-bottom: 3px solid var(--accent-color);
+  border-radius: 0 0 12px 12px;
+}
+
+/* Action Navbar Panel */
+.action-nav {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.btn-nav {
+  font-weight: 500;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Corporate Cards */
+.custom-card {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.03);
+  padding: 1.75rem;
+}
+
+.card-title-header {
+  font-weight: 600;
+  color: #0f172a;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Input Fields Styling */
+.form-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 0.6rem 0.85rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Custom Table Layout */
+.custom-table {
+  margin-bottom: 0;
+}
+
+.custom-table thead {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.custom-table th {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1rem;
+  border: none;
+}
+
+.custom-table td {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+/* Modal Popups Styling */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+}
+
+.modal-header {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}

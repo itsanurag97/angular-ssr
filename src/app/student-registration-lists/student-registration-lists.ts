@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { inject, PLATFORM_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { StudentRegistration } from '../models/student-registration.model';
@@ -13,6 +14,8 @@ import { StudentRegistrationService } from '../services/student-registration.ser
   styleUrl: './student-registration-lists.scss'
 })
 export class StudentRegistrationLists implements OnInit {
+
+  private readonly platformId = inject(PLATFORM_ID);
 
   students: StudentRegistration[] = [];
   selectedStudent: StudentRegistration | null = null;
@@ -50,7 +53,9 @@ export class StudentRegistrationLists implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getAllStudents();
+    if (isPlatformBrowser(this.platformId)) {
+      this.getAllStudents();
+    }
   }
 
   // =====================================================

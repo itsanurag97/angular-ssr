@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { StudentRegistration } from '../models/student-registration.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { StudentRegistration } from '../models/student-registration.model';
 export class StudentRegistrationService {
 
   // Aapke Spring Boot Controller ka RequestMapping URL
-  private readonly baseUrl = 'http://localhost:8080/api/v1/students';
+  private readonly baseUrl = environment.apiUrl;
 
   constructor(private readonly http: HttpClient) {}
 
